@@ -1,1 +1,473 @@
-{"sections":{"slideshow_fjmXEK":{"type":"slideshow","blocks":{"slide_tnG6tz":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/1_slide.png","image_overlay_opacity":0,"heading":"","heading_size":"h1","subheading":"","button_label":"","link":"","button_style_secondary":true,"show_text_box":false,"box_align":"middle-center","text_alignment":"center","text_alignment_mobile":"center","color_scheme":""}},"slide_hyTr67":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/2_slide.png","image_overlay_opacity":0,"heading":"","heading_size":"h1","subheading":"","button_label":"Button label","link":"","button_style_secondary":true,"show_text_box":false,"box_align":"bottom-center","text_alignment":"center","text_alignment_mobile":"center","color_scheme":""}},"slide_LrKfJN":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/Beautifully_Delicious_Script.png","image_overlay_opacity":0,"heading":"","heading_size":"h1","subheading":"","button_label":"Button label","link":"","button_style_secondary":true,"show_text_box":false,"box_align":"bottom-right","text_alignment":"center","text_alignment_mobile":"center","color_scheme":""}},"slide_7KUAzx":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/4_slide.png","image_overlay_opacity":0,"heading":"","heading_size":"h1","subheading":"","button_label":"Button label","link":"","button_style_secondary":true,"show_text_box":false,"box_align":"bottom-left","text_alignment":"center","text_alignment_mobile":"center","color_scheme":""}},"slide_JbfjDf":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/5_slide.png","image_overlay_opacity":0,"heading":"","heading_size":"h1","subheading":"","button_label":"Button label","link":"","button_style_secondary":true,"show_text_box":false,"box_align":"top-right","text_alignment":"center","text_alignment_mobile":"center","color_scheme":""}}},"block_order":["slide_tnG6tz","slide_hyTr67","slide_LrKfJN","slide_7KUAzx","slide_JbfjDf"],"name":"t:sections.slideshow.presets.name","settings":{"layout":"grid","slide_height":"adapt_image","slider_visual":"dots","auto_rotate":true,"change_slides_speed":5,"image_behavior":"none","show_text_below":true,"accessibility_info":"Slideshow about our brand"}},"collection_list_drpmpm":{"type":"collection-list","blocks":{"featured_collection_XFPgN6":{"type":"featured_collection","settings":{"collection":"womens-elevated-essentials"}},"featured_collection_UayDLe":{"type":"featured_collection","settings":{"collection":"mens-modern-staples"}},"featured_collection_y7ENcr":{"type":"featured_collection","settings":{"collection":"the-finishing-touches"}},"featured_collection_hFfGTj":{"type":"featured_collection","settings":{"collection":"smart-living-home"}},"featured_collection_6Lg6TV":{"type":"featured_collection","settings":{"collection":"tik-tok-trendins"}}},"block_order":["featured_collection_XFPgN6","featured_collection_UayDLe","featured_collection_y7ENcr","featured_collection_hFfGTj","featured_collection_6Lg6TV"],"name":"t:sections.collection-list.presets.name","settings":{"title":"SHOP CATEGORIES","heading_size":"h1","image_ratio":"square","columns_desktop":5,"color_scheme":"scheme-1","show_view_all":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection":{"type":"featured-collection","settings":{"collection":"all","products_to_show":8,"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"outline","color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}},"17599436863bf25992":{"type":"apps","settings":{"include_margins":true}},"image_with_text_7jDGxJ":{"type":"image-with-text","blocks":{"heading_PLki79":{"type":"heading","settings":{"heading":"About us","heading_size":"h0"}},"text_m4yqj3":{"type":"text","settings":{"text":"<p>Step into our world of style, where fashion meets individuality and trends come to life. We bring you the latest in men’s and women’s clothing, stylish home accessories, and must-have products from the e-commerce scene. Every item we curate is all about comfort, creativity, and self-expression — because your vibe deserves to stand out. Dress bold, live free, and make every day your runway.<\/p>","text_style":"body"}},"button_TJweRP":{"type":"button","settings":{"button_label":"CONTACT US","button_link":"shopify:\/\/pages\/contact","button_style_secondary":true}}},"block_order":["heading_PLki79","text_m4yqj3","button_TJweRP"],"name":"t:sections.image-with-text.presets.name","settings":{"image":"shopify:\/\/shop_images\/ZELARI.SHOP.png","height":"small","desktop_image_width":"medium","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"center","mobile_content_alignment":"center","section_color_scheme":"scheme-1","color_scheme":"scheme-1","padding_top":36,"padding_bottom":36}},"ss_feature_1_M7qPhp":{"type":"ss-feature-1","blocks":{"image_AqeVQh":{"type":"image","settings":{"feature_title":"Free Shipping","feature_text":"<p>Order today, receive tomorrow<\/p>","feature_url":"https:\/\/section.store\/","hide_image":false}},"image_NdpJiP":{"type":"image","settings":{"feature_title":"Price-match guarantee","feature_text":"<p>Safe money when ordering with us<\/p>","feature_url":"","hide_image":false}},"image_VABg8T":{"type":"image","settings":{"feature_title":"Hassle-free exchange","feature_text":"<p>Receive a slip for exchanges<\/p>","feature_url":"","hide_image":false}},"image_7rQNXC":{"type":"image","settings":{"feature_title":"5.0 Google Reviews","feature_text":"<p>Customer satisfaction #1 priority<\/p>","feature_url":"","hide_image":false}}},"block_order":["image_AqeVQh","image_NdpJiP","image_VABg8T","image_7rQNXC"],"name":"SS - Feature #1","settings":{"feature_row":4,"feature_row_mobile":1,"feature_gap":20,"feature_gap_mobile":20,"feature_padding_horizontal":0,"feature_padding_vertical":0,"feature_radius":16,"feature_border_thickness":0,"feature_shadow":false,"feature_heading_custom":false,"feature_heading_font":"josefin_sans_n4","feature_heading_size":14,"feature_heading_size_mobile":12,"feature_heading_height":130,"feature_heading_mt":8,"feature_text_custom":false,"feature_text_font":"josefin_sans_n4","feature_text_size":12,"feature_text_size_mobile":12,"feature_text_height":130,"feature_text_mt":4,"feature_icon_size":42,"feature_icon_size_mobile":42,"feature_bg":"#494949","feature_border_color":"#000000","feature_shadow_color":"#000000","feature_heading_color":"#000000","feature_text_color":"#000000","feature_icon_color":"#000000","background_color":"#0a0707","background_gradient":"","border_color":"#000000","margin_top":0,"margin_bottom":0,"padding_top":16,"padding_bottom":16,"padding_horizontal":5,"padding_horizontal_mobile":1.5,"full_width":false,"content_width":120,"border_thickness":0,"lazy":true}},"multicolumn_VpBHdx":{"type":"multicolumn","blocks":{"column_iUr3dE":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/ZELARI.SHOP..png","title":"<strong>Sofia Martinsn<\/strong>","text":"<p>“Loved my purchase! The quality exceeded my expectations, and the delivery was super fast. The product looks exactly like the photos — I’ll definitely be shopping here again!”<\/p>","link_label":"","link":"shopify:\/\/collections\/womens-elevated-essentials"}},"column_zLG9YW":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/ZELARI_ZEALRI.png","title":"<strong>Vicente<\/strong>","text":"<p>I never used online shopping before, but this time, I felt comfortable. The service was excellent, and the customer support was top-notch. The product variety was also impressive. <br\/>love you zelari<\/p>","link_label":"","link":""}},"column_TiCGqW":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/zelari_zlari_zelari.png","title":"<strong>Gabrie<\/strong>","text":"<p>A friend recommended Zelari for a trending TikTok product for my wife. I was impressed with its quality and durability. Thank you, Zelari team, for your outstanding service.<\/p>","link_label":"","link":""}},"column_7JNigf":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/zelaei.shop_products.png","title":"<strong>Camila<\/strong>","text":"<p>I’m thrilled with my recent purchase from Zelari.shop! The products are stylish, high-quality, and beautifully packaged. The customer service was exceptional. Recomendo fortemente a Zelari.shop para produtos modernos e luxuosos.<\/p>","link_label":"","link":""}}},"block_order":["column_iUr3dE","column_zLG9YW","column_TiCGqW","column_7JNigf"],"name":"t:sections.multicolumn.presets.name","settings":{"title":"The customer loves <strong>Zelari<\/strong>","heading_size":"h1","image_width":"full","image_ratio":"square","button_label":"","button_link":"","columns_desktop":4,"column_alignment":"center","background_style":"primary","color_scheme":"","columns_mobile":"1","swipe_on_mobile":true,"padding_top":36,"padding_bottom":36}}},"order":["slideshow_fjmXEK","collection_list_drpmpm","featured_collection","17599436863bf25992","image_with_text_7jDGxJ","ss_feature_1_M7qPhp","multicolumn_VpBHdx"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_fjmXEK": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_tnG6tz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1_slide.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_hyTr67": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/2_slide.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "bottom-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_LrKfJN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Beautifully_Delicious_Script.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "bottom-right",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_7KUAzx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/4_slide.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "bottom-left",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        },
+        "slide_JbfjDf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/5_slide.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "top-right",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_tnG6tz",
+        "slide_hyTr67",
+        "slide_LrKfJN",
+        "slide_7KUAzx",
+        "slide_JbfjDf"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "auto_vido_PbAxyR": {
+      "type": "auto-vido",
+      "blocks": {
+        "video_aYwWQc": {
+          "type": "video",
+          "settings": {
+            "video_link": "https://cdn.shopify.com/videos/c/o/v/9e42e32227f740aa8246a6c2844c68d4.mp4",
+            "video_blur": 0,
+            "desktop_height": 400,
+            "mobile_height": 300,
+            "enable_content_box": false,
+            "content_box_color": "rgba(0, 0, 0, 0.5)",
+            "custom_font_url": "",
+            "title": "",
+            "heading_size": 3.8,
+            "mobile_heading_size": 2.2,
+            "letter_spacing": 0,
+            "text": "",
+            "description_size": 1.1,
+            "mobile_description_size": 1,
+            "color_heading": "#ffffff",
+            "color_text": "#ffffff",
+            "button_label": "",
+            "button_link": "",
+            "button_size": 1.5,
+            "color_btn_bg": "#ffffff",
+            "color_btn_text": "#000000",
+            "button_border_color": "#ffffff",
+            "button_radius": 4,
+            "button_bg_opacity": 1,
+            "button_border_opacity": 1
+          }
+        }
+      },
+      "block_order": [
+        "video_aYwWQc"
+      ],
+      "name": "Autoplay Video",
+      "settings": {}
+    },
+    "collection_list_drpmpm": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_XFPgN6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens-elevated-essentials"
+          }
+        },
+        "featured_collection_UayDLe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-modern-staples"
+          }
+        },
+        "featured_collection_y7ENcr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "the-finishing-touches"
+          }
+        },
+        "featured_collection_hFfGTj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "smart-living-home"
+          }
+        },
+        "featured_collection_6Lg6TV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tik-tok-trendins"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_XFPgN6",
+        "featured_collection_UayDLe",
+        "featured_collection_y7ENcr",
+        "featured_collection_hFfGTj",
+        "featured_collection_6Lg6TV"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "SHOP CATEGORIES",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "17599436863bf25992": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_with_text_7jDGxJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PLki79": {
+          "type": "heading",
+          "settings": {
+            "heading": "About us",
+            "heading_size": "h0"
+          }
+        },
+        "text_m4yqj3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Step into our world of style, where fashion meets individuality and trends come to life. We bring you the latest in men’s and women’s clothing, stylish home accessories, and must-have products from the e-commerce scene. Every item we curate is all about comfort, creativity, and self-expression — because your vibe deserves to stand out. Dress bold, live free, and make every day your runway.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_TJweRP": {
+          "type": "button",
+          "settings": {
+            "button_label": "CONTACT US",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_PLki79",
+        "text_m4yqj3",
+        "button_TJweRP"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/ZELARI.SHOP.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "center",
+        "mobile_content_alignment": "center",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ss_feature_1_M7qPhp": {
+      "type": "ss-feature-1",
+      "blocks": {
+        "image_AqeVQh": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Free Shipping",
+            "feature_text": "<p>Order today, receive tomorrow</p>",
+            "feature_url": "https://section.store/",
+            "hide_image": false
+          }
+        },
+        "image_NdpJiP": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Price-match guarantee",
+            "feature_text": "<p>Safe money when ordering with us</p>",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_VABg8T": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Hassle-free exchange",
+            "feature_text": "<p>Receive a slip for exchanges</p>",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_7rQNXC": {
+          "type": "image",
+          "settings": {
+            "feature_title": "5.0 Google Reviews",
+            "feature_text": "<p>Customer satisfaction #1 priority</p>",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_AqeVQh",
+        "image_NdpJiP",
+        "image_VABg8T",
+        "image_7rQNXC"
+      ],
+      "name": "SS - Feature #1",
+      "settings": {
+        "feature_row": 4,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_horizontal": 0,
+        "feature_padding_vertical": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "josefin_sans_n4",
+        "feature_heading_size": 14,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 12,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#494949",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#0a0707",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "multicolumn_VpBHdx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iUr3dE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ZELARI.SHOP..png",
+            "title": "<strong>Sofia Martinsn</strong>",
+            "text": "<p>“Loved my purchase! The quality exceeded my expectations, and the delivery was super fast. The product looks exactly like the photos — I’ll definitely be shopping here again!”</p>",
+            "link_label": "",
+            "link": "shopify://collections/womens-elevated-essentials"
+          }
+        },
+        "column_zLG9YW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ZELARI_ZEALRI.png",
+            "title": "<strong>Vicente</strong>",
+            "text": "<p>I never used online shopping before, but this time, I felt comfortable. The service was excellent, and the customer support was top-notch. The product variety was also impressive. <br/>love you zelari</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TiCGqW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/zelari_zlari_zelari.png",
+            "title": "<strong>Gabrie</strong>",
+            "text": "<p>A friend recommended Zelari for a trending TikTok product for my wife. I was impressed with its quality and durability. Thank you, Zelari team, for your outstanding service.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7JNigf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/zelaei.shop_products.png",
+            "title": "<strong>Camila</strong>",
+            "text": "<p>I’m thrilled with my recent purchase from Zelari.shop! The products are stylish, high-quality, and beautifully packaged. The customer service was exceptional. Recomendo fortemente a Zelari.shop para produtos modernos e luxuosos.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_iUr3dE",
+        "column_zLG9YW",
+        "column_TiCGqW",
+        "column_7JNigf"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "The customer loves <strong>Zelari</strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "square",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_fjmXEK",
+    "auto_vido_PbAxyR",
+    "collection_list_drpmpm",
+    "featured_collection",
+    "17599436863bf25992",
+    "image_with_text_7jDGxJ",
+    "ss_feature_1_M7qPhp",
+    "multicolumn_VpBHdx"
+  ]
+}
