@@ -1,0 +1,278 @@
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<style>
+.custom-collection-slider {
+  margin: 0 auto;
+}
+.custom-collection-slider ul {
+  justify-content: center;
+  margin-bottom: 0 !important;
+}
+.custom-collection-slider .dontjustifyit ul {
+  justify-content: unset;
+   margin-bottom: 0 !important;
+}
+.custom-collection-slider .collection-list-wrapper {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+.custom-collection-slider .card__content .icon-wrap {
+  display: none;
+}
+.custom-collection-slider .card__content {
+  text-align: center;
+}
+.custom-collection-slider .card {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.custom-collection-slider .card__content .card__heading {
+  color: #0000008f;
+  padding-top: 6px;
+  transition: .3s ease-in-out;
+  /* font-size: 15px; */
+}
+.custom-collection-slider .card__content .card__information {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.custom-collection-slider .media--circle .card:hover .card__content .card__heading {
+  color: #000;
+  transition: .3s ease-in-out;
+}
+.custom-collection-slider .grid--peek .grid__item {
+  min-width: 7%;
+}
+.custom-collection-slider .grid__item {
+  width: calc(7.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+}
+.custom-collection-slider .slider-buttons {
+  display: flex !important;
+}
+.custom-collection-slider .media--circle .card__media {
+  border-radius: 50% !important;
+  border: 2px solid #dadada;
+  padding: 2px;
+}
+.custom-collection-slider .media--circle .card:hover .card__media  {
+  border: 3px solid #000;
+  transition: .3s ease-in-out;
+}
+.custom-collection-slider .media--circle {
+  padding-bottom: 0;
+}
+.custom-collection-slider .card:hover .media.media--hover-effect>img:first-child:only-child {
+  transform: scale(0.9);
+  transition: .3s ease-in-out;
+}
+.custom-collection-slider .card__inner {
+  background: none;
+}
+.custom-collection-slider .card__content .card__heading {
+  font-size: 14px;
+}
+@media only screen and (max-width: 800px) {
+  .custom-collection-slider .card__content .card__heading {
+    font-size: 13px;
+  }
+  .custom-collection-slider {
+    width: 87%;
+  }
+  .custom-collection-slider .collection-list-wrapper {
+    padding-left: unset;
+    padding-right: unset;
+  }
+  .custom-collection-slider .grid--peek .grid__item {
+    min-width: 25%;
+  }
+  .custom-collection-slider .grid__item {
+    width: calc(15.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+  }
+}
+</style>
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 1
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+-%}
+<div>
+  <div>
+    <slider-component>
+      <ul
+        id="Slider-{{ section.id }}"
+        role="list"
+      >
+        {%- liquid
+          assign columns = section.blocks.size
+        -%}
+        {%- for block in section.blocks -%}
+          <li id="Slide-{{ section.id }}-{{ forloop.index }}" {{ block.shopify_attributes }}>
+            {% render 'card-collection', card_collection: block.settings.collection , media_aspect_ratio: section.settings.image_ratio, columns: columns %}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </slider-component>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Collection slider",
+  "tag": "section",
+  "class": "section section-collection-list",
+  "max_blocks": 15,
+  "settings": [
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "adapt"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        },
+        {
+          "value": "circle",
+          "label": "Circle"
+        }
+      ],
+      "default": "circle",
+      "label": "Image ratio"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "label": "Number of columns on desktop"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "Accent 2"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 1"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "inverse"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color scheme",
+      "info": "To change the card color scheme, update your theme settings."
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "label": "Number of columns on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "default": true,
+      "label": "Enable swipe on mobile"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection slider",
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
