@@ -226,7 +226,7 @@
             "video_link": "https://cdn.shopify.com/videos/c/o/v/b538a53a7f12424aaee9da17d34f35e8.mp4",
             "video_blur": 0,
             "desktop_height": 600,
-            "mobile_height": 300,
+            "mobile_height": 180,
             "enable_content_box": false,
             "content_box_color": "rgba(0, 0, 0, 0.5)",
             "custom_font_url": "",
