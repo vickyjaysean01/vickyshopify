@@ -1,0 +1,738 @@
+{% comment %}
+<!-- Designed by OnHOW YouTube Channel - Anas El Medlaoui -->
+{% endcomment %}
+{%- if section.blocks.size > 0 -%}
+{%- for block in section.blocks -%}
+  {% if block.type == 'video' %}
+    <div class="onhow-video-box" data-block-id="{{ block.id }}" style="min-height: {{ block.settings.desktop_height }}px;">
+      {%- if block.settings.video_link != blank -%}
+        <div class="onhow-fullscreen-video-wrap">
+          <video class="onhow-video-js" loop autoplay preload="none" muted playsinline
+            poster="https:{{ block.settings.video_image | img_url: 'master' }}"
+            style="filter: blur({{ block.settings.video_blur }}px);">
+            <source src="{{ block.settings.video_link }}" type="video/mp4">
+          </video>
+        </div>
+      {%- else -%}
+        <div class="onhow-fallback-image" style="background-image: url('{{ block.settings.video_image | img_url: 'master' }}');"></div>
+      {%- endif -%}
+
+      <div class="onhow-content-box">
+        {% if block.settings.enable_content_box %}
+        <div class="onhow-content-background" style="background-color: {{ block.settings.content_box_color }};">
+        {% endif %}
+        
+        {% if block.settings.title != blank %}
+          <h1 class="onhow-content-title">{{ block.settings.title | escape }}</h1>
+        {% endif %}
+
+        {% if block.settings.text != blank %}
+          <div class="onhow-content-description" id="{{ block.id }}">
+            {{ block.settings.text }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.button_link != blank and block.settings.button_label != blank %}
+          <a href="{{ block.settings.button_link }}" class="onhow-content-btn" 
+             style="border-radius: {{ block.settings.button_radius }}px;">
+            {{ block.settings.button_label | escape }}
+          </a>
+        {% endif %}
+        
+        {% if block.settings.enable_content_box %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <div class="onhow-image-box" data-block-id="{{ block.id }}" style="min-height: {{ block.settings.desktop_height }}px;">
+      {%- if block.settings.image_bg != blank -%}
+        <div class="onhow-background-image" style="background-image: url('{{ block.settings.image_bg | img_url: 'master' }}');"></div>
+      {%- else -%}
+        <div class="onhow-background-color"></div>
+      {%- endif -%}
+
+      <div class="onhow-content-box">
+        {% if block.settings.enable_content_box %}
+        <div class="onhow-content-background" style="background-color: {{ block.settings.content_box_color }};">
+        {% endif %}
+        
+        {% if block.settings.title != blank %}
+          <h1 class="onhow-content-title">{{ block.settings.title | escape }}</h1>
+        {% endif %}
+
+        {% if block.settings.text != blank %}
+          <div class="onhow-content-description" id="{{ block.id }}">
+            {{ block.settings.text }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.button_link != blank and block.settings.button_label != blank %}
+          <a href="{{ block.settings.button_link }}" class="onhow-content-btn"
+             style="border-radius: {{ block.settings.button_radius }}px;">
+            {{ block.settings.button_label | escape }}
+          </a>
+        {% endif %}
+        
+        {% if block.settings.enable_content_box %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{%- endfor -%}
+
+{% else %}
+  <div class="onhow-placeholder-noblocks">
+    This section doesn't currently include any content. Add content to this section using the sidebar.
+  </div>
+{%- endif -%}
+
+{% style %}
+:root {
+  --onhow-text-color-{{ section.id }}: {{ section.blocks[0].settings.color_text }};
+  --onhow-heading-color-{{ section.id }}: {{ section.blocks[0].settings.color_heading }};
+  --onhow-btn-bg-{{ section.id }}: {{ section.blocks[0].settings.color_btn_bg }};
+  --onhow-btn-text-{{ section.id }}: {{ section.blocks[0].settings.color_btn_text }};
+  --onhow-btn-border-color-{{ section.id }}: {{ section.blocks[0].settings.button_border_color | default: '#ffffff' }};
+  --onhow-btn-bg-opacity-{{ section.id }}: {{ section.blocks[0].settings.button_bg_opacity | default: 1 }};
+  --onhow-btn-border-opacity-{{ section.id }}: {{ section.blocks[0].settings.button_border_opacity | default: 1 }};
+  --onhow-bg-color-{{ section.id }}: {{ section.blocks[0].settings.color_bg | default: '#16165b' }};
+  --onhow-heading-size-{{ section.id }}: {{ section.blocks[0].settings.heading_size | default: 3.8 }}rem;
+  --onhow-description-size-{{ section.id }}: {{ section.blocks[0].settings.description_size | default: 1.1 }}rem;
+  --onhow-button-size-{{ section.id }}: {{ section.blocks[0].settings.button_size | default: 1.5 }}rem;
+  --onhow-letter-spacing-{{ section.id }}: {{ section.blocks[0].settings.letter_spacing | default: 0 }}px;
+  --onhow-mobile-heading-size-{{ section.id }}: {{ section.blocks[0].settings.mobile_heading_size | default: 2.2 }}rem;
+  --onhow-mobile-description-size-{{ section.id }}: {{ section.blocks[0].settings.mobile_description_size | default: 1 }}rem;
+}
+
+{% if section.blocks[0].settings.custom_font_url != blank %}
+@font-face {
+  font-family: 'CustomHeadingFont';
+  src: url('{{ section.blocks[0].settings.custom_font_url }}') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+{% endif %}
+
+.onhow-video-background {
+  position: relative;
+  margin-top: 0;
+  z-index: 1;
+}
+
+.onhow-video-box,
+.onhow-image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  max-height: 480px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.onhow-fallback-image,
+.onhow-background-image,
+.onhow-background-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.onhow-background-color {
+  background-color: var(--onhow-bg-color-{{ section.id }});
+}
+
+.onhow-fullscreen-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.onhow-video-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.onhow-content-box {
+  position: relative;
+  padding: 30px 20px;
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.onhow-content-background {
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.onhow-content-title {
+  color: var(--onhow-heading-color-{{ section.id }});
+  font-size: var(--onhow-heading-size-{{ section.id }});
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: var(--onhow-letter-spacing-{{ section.id }});
+  {% if section.blocks[0].settings.custom_font_url != blank %}
+  font-family: 'CustomHeadingFont', var(--font-heading-family);
+  {% else %}
+  font-family: var(--font-heading-family);
+  {% endif %}
+  font-weight: var(--font-heading-weight);
+}
+
+.onhow-content-description {
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+.onhow-content-description p {
+  color: var(--onhow-text-color-{{ section.id }});
+  font-size: var(--onhow-description-size-{{ section.id }});
+  line-height: 1.6;
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  text-align: inherit;
+}
+
+.onhow-content-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: var(--onhow-button-size-{{ section.id }});
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  color: var(--onhow-btn-text-{{ section.id }});
+  border: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-body-family);
+  min-width: 180px;
+  z-index: 1;
+}
+
+.onhow-content-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--onhow-btn-bg-{{ section.id }});
+  opacity: var(--onhow-btn-bg-opacity-{{ section.id }});
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.onhow-content-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--onhow-btn-border-color-{{ section.id }});
+  opacity: var(--onhow-btn-border-opacity-{{ section.id }});
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.onhow-content-btn:hover::before {
+  opacity: calc(var(--onhow-btn-bg-opacity-{{ section.id }}) * 0.9);
+}
+
+.onhow-content-btn:hover::after {
+  opacity: calc(var(--onhow-btn-border-opacity-{{ section.id }}) * 0.9);
+}
+
+.onhow-placeholder-noblocks {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .onhow-video-background {
+    margin-top: 0;
+  }
+
+  .onhow-video-box,
+  .onhow-image-box {
+    min-height: {{ section.blocks[0].settings.mobile_height }}px !important;
+    height: auto !important;
+  }
+
+  .onhow-content-title {
+    font-size: var(--onhow-mobile-heading-size-{{ section.id }});
+    display: block;
+  }
+
+  .onhow-content-description p {
+    font-size: var(--onhow-mobile-description-size-{{ section.id }});
+  }
+
+  .onhow-content-btn {
+    display: inline-block;
+    min-width: 150px;
+    padding: 10px 20px;
+    font-size: calc(var(--onhow-button-size-{{ section.id }}) * 0.6);
+  }
+  
+  .onhow-content-background {
+    padding: 20px;
+  }
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": { "en": "Autoplay Video" },
+  "class": "onhow-video-background",
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_link",
+          "label": { "en": "Video link" }
+        },
+        {
+          "type": "image_picker",
+          "id": "video_image",
+          "label": { "en": "Cover image" }
+        },
+        {
+          "type": "range",
+          "id": "video_blur",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": { "en": "Video blur effect" },
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "desktop_height",
+          "min": 200,
+          "max": 800,
+          "step": 10,
+          "unit": "px",
+          "label": { "en": "Desktop height" },
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "mobile_height",
+          "min": 150,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": { "en": "Mobile height" },
+          "default": 300
+        },
+        {
+          "type": "header",
+          "content": { "en": "Content Box Settings" }
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_content_box",
+          "label": { "en": "Enable background box" },
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "content_box_color",
+          "label": { "en": "Box background color" },
+          "default": "rgba(0, 0, 0, 0.5)"
+        },
+        {
+          "type": "header",
+          "content": { "en": "Typography" }
+        },
+        {
+          "type": "text",
+          "id": "custom_font_url",
+          "label": { "en": "Custom heading font URL" },
+          "info": "Upload font to Files section and paste URL here"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": { "en": "Heading" },
+          "default": "Video Background"
+        },
+        {
+          "type": "range",
+          "id": "heading_size",
+          "min": 2,
+          "max": 6,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Desktop heading size" },
+          "default": 3.8
+        },
+        {
+          "type": "range",
+          "id": "mobile_heading_size",
+          "min": 1.5,
+          "max": 4,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Mobile heading size" },
+          "default": 2.2
+        },
+        {
+          "type": "range",
+          "id": "letter_spacing",
+          "min": -5,
+          "max": 20,
+          "step": 0.5,
+          "unit": "px",
+          "label": { "en": "Heading letter spacing" },
+          "default": 0
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": { "en": "Description" },
+          "default": { "en": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>" }
+        },
+        {
+          "type": "range",
+          "id": "description_size",
+          "min": 0.8,
+          "max": 2,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Desktop description size" },
+          "default": 1.1
+        },
+        {
+          "type": "range",
+          "id": "mobile_description_size",
+          "min": 0.7,
+          "max": 1.5,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Mobile description size" },
+          "default": 1
+        },
+        {
+          "type": "header",
+          "content": { "en": "Colors" }
+        },
+        {
+          "type": "color",
+          "id": "color_heading",
+          "label": { "en": "Heading color" },
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": { "en": "Text color" },
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": { "en": "Button" }
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": { "en": "Button label" }
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": { "en": "Button link" }
+        },
+        {
+          "type": "range",
+          "id": "button_size",
+          "min": 0.8,
+          "max": 2,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Button text size" },
+          "default": 1.5
+        },
+        {
+          "type": "color",
+          "id": "color_btn_bg",
+          "label": { "en": "Background button color" },
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "color_btn_text",
+          "label": { "en": "Button text color" },
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "button_border_color",
+          "label": { "en": "Button border color" },
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "button_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "Button corner radius",
+          "default": 4
+        },
+        {
+          "type": "range",
+          "id": "button_bg_opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "label": { "en": "Button background opacity" },
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "button_border_opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "label": { "en": "Button border opacity" },
+          "default": 1
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "color",
+          "id": "color_bg",
+          "label": { "en": "Background color" },
+          "default": "#16165b"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_bg",
+          "label": { "en": "Background image" }
+        },
+        {
+          "type": "range",
+          "id": "desktop_height",
+          "min": 200,
+          "max": 800,
+          "step": 10,
+          "unit": "px",
+          "label": { "en": "Desktop height" },
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "mobile_height",
+          "min": 150,
+          "max": 600,
+          "step": 10,
+          "unit": "px",
+          "label": { "en": "Mobile height" },
+          "default": 300
+        },
+        {
+          "type": "header",
+          "content": { "en": "Content Box Settings" }
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_content_box",
+          "label": { "en": "Enable background box" },
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "content_box_color",
+          "label": { "en": "Box background color" },
+          "default": "rgba(0, 0, 0, 0.5)"
+        },
+        {
+          "type": "header",
+          "content": { "en": "Typography" }
+        },
+        {
+          "type": "text",
+          "id": "custom_font_url",
+          "label": { "en": "Custom heading font URL" },
+          "info": "Upload font to Files section and paste URL here"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Image Background",
+          "label": { "en": "Heading" }
+        },
+        {
+          "type": "range",
+          "id": "heading_size",
+          "min": 2,
+          "max": 6,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Desktop heading size" },
+          "default": 3.8
+        },
+        {
+          "type": "range",
+          "id": "mobile_heading_size",
+          "min": 1.5,
+          "max": 4,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Mobile heading size" },
+          "default": 2.2
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": { "en": "Description" },
+          "default": { "en": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>" }
+        },
+        {
+          "type": "range",
+          "id": "description_size",
+          "min": 0.8,
+          "max": 2,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Desktop description size" },
+          "default": 1.1
+        },
+        {
+          "type": "range",
+          "id": "mobile_description_size",
+          "min": 0.7,
+          "max": 1.5,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Mobile description size" },
+          "default": 1
+        },
+        {
+          "type": "header",
+          "content": { "en": "Colors" }
+        },
+        {
+          "type": "color",
+          "id": "color_heading",
+          "label": { "en": "Heading color" },
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": { "en": "Text color" },
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": { "en": "Button" }
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": { "en": "Button label" }
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": { "en": "Button link" }
+        },
+        {
+          "type": "range",
+          "id": "button_size",
+          "min": 0.8,
+          "max": 2,
+          "step": 0.1,
+          "unit": "rem",
+          "label": { "en": "Button text size" },
+          "default": 1.5
+        },
+        {
+          "type": "color",
+          "id": "color_btn_bg",
+          "label": { "en": "Background button color" },
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "color_btn_text",
+          "label": { "en": "Button text color" },
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "button_radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "Button corner radius",
+          "default": 4
+        },
+        {
+          "type": "range",
+          "id": "button_opacity",
+          "min": 0.1,
+          "max": 1,
+          "step": 0.1,
+          "label": { "en": "Button opacity" },
+          "default": 1
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": { "en": "Autoplay Video" },
+      "category": { "en": "Media" },
+      "blocks": [
+        { "type": "video" }
+      ]
+    }
+  ]
+}
+{% endschema %}
